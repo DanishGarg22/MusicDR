@@ -1,0 +1,218 @@
+/*main container2*/
+.container2{
+    position: relative;
+    height: 82vh;;
+    display: flex;
+    width: 20%;
+    background-color: black;
+    gap: 7px;
+    flex-direction: column;
+    margin: 9px;
+}
+/* container2 box*/
+.container2 .box{
+    position: relative;
+    display: flex;
+    height: 20vh;
+    width: 97%;
+    background-color: #121212;
+    border-radius: 5px;
+    flex-direction: column;
+    gap: 20px;
+}
+.container2 .box .image>img:first-child{
+    top: 32%;
+    cursor: pointer;
+    position: relative;
+    left: 7%;
+}
+
+
+.container2 .box>.image{
+    display: flex;
+    justify-content: space-between;
+}
+.container2 .box>button{
+    background-color: transparent;
+    height: 25px;
+    border-color: transparent;
+}
+
+.container2 .box button>img{
+    top: 31%;
+    height: 23px;
+    width: 14%;
+    cursor: pointer;
+    position: relative;
+    right: -3%;
+}
+
+#btn,#btn1{
+    display: flex;
+    justify-content: start;
+}
+.container2 .box #btn>span{
+    top: 52%;
+    left: 10.5%;
+    position: relative;
+    font-size: 16px;
+    font-weight: 600;
+    color: grey;
+    cursor: pointer;
+}
+.container2 .box #btn>span:hover{
+    color: white;
+}
+
+.container2 .box #btn1>span{
+    top: 53.75%;
+    left: 10.5%;
+    position: relative;
+    font-size: 16px;
+    font-weight: 600;
+    color: grey;
+    cursor: pointer;
+}
+.container2 .box #btn1>span:hover{
+    color: white;
+}
+/*container2 box2*/
+
+ .container2 .box2{
+    position: relative;
+    height: 61vh;
+    width: 97%;
+    background-color: #121212;
+    border-radius: 5px;
+}
+.footernavbar{
+    padding-right: 22px;
+    padding-left: 22px;
+    padding-top: 6px;
+    display: flex; 
+    position: relative; 
+    height: 51px; 
+    justify-content: space-between;
+}
+.container2 .box2 .footernavbar>button{
+    position: relative;
+    background-color: transparent;
+    border-color: transparent;
+    color: grey;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.container2 .box2 .footernavbar>button:nth-child(2){
+    background-color: transparent; 
+    border-color: transparent; 
+    color: grey; 
+    font-size: 32px; 
+    font-weight: 500;
+}
+
+.box2 footer>.footerclass>.alllinks{
+    padding: 18px 33px; 
+    position: absolute; 
+    display: flex; 
+    justify-content: start; 
+    gap: 25px; row-gap: 18px; 
+    flex-wrap: wrap; 
+    font-size: 10px; 
+    top: 10px;
+}
+.box2 .footerclass .alllinks>div>a>span{
+    position: relative;
+    text-decoration: none;
+    color: white;
+}
+
+
+/* playlist*/
+.playlist{
+    position: relative;
+    width: 100%;
+    max-height: 24vh;
+    overflow-y: scroll;
+}
+
+.playlist>ul{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    padding-left: 38px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.playlist>ul>li{
+    margin: 2px;
+    color: white;
+    text-decoration: none;
+    list-style-image: url("svg file/playbarsvgfile/music.svg");
+}
+.playlist>ul>li:hover{
+    text-decoration: underline;
+    color: red;
+}
+
+.playlist .musicbutton{
+    height: 4vh;
+    width: 4vh;
+
+}
+
+
+
+
+
+.box2>footer{
+    position: relative;
+}
+.box2 .footerbutton{
+    position: absolute;
+    bottom: 33px;
+    left: 26px;
+}
+.box2 .footerclass{
+    display: flex;
+    position: relative;
+    height: 29vh;
+}
+.box2 .footerbutton>button{
+    position: absolute;
+    display: flex;
+    background-color: transparent;
+    border: transparent;
+    border: 1px solid black;
+    padding: 4px;
+    border-radius: 50px;
+    gap: 10px;
+    bottom: 0;
+}
+.box2 .footerbutton>button:last-child{
+    color: white;
+    font-size: 12px;
+}
+
+
+/*  media queries*/
+@media(max-width:921px){
+    .container2{
+        position: absolute;
+        left: -100%;
+        z-index: 1;
+        width: 300px;
+        transition: all .3s cubic-bezier(0, 0.22, 0, 0.05);
+    }
+}
+
+@media (min-width:921px) {
+    .container2 .box .image>img:nth-child(2){
+        top: 32%;
+        cursor: pointer;
+        position: relative;
+        right: 10px;
+        display: none;
+    }
+}
