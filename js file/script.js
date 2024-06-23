@@ -15,7 +15,7 @@ function convertSecondsToMinutes(seconds) {
 
 async function getsongs(folder) {
     currentfolder = folder;
-    let a = await fetch(`http://127.0.0.1:5500/musicdr/${folder}/`)
+    let a = await fetch(`https://github.com/DanishGarg22/MusicDR/blob/main/songs/${folder}/`)
     let response = await a.text();
     let div = document.createElement("div");
     div.innerHTML = response;
@@ -58,7 +58,7 @@ const playMusic = (track, pause = false) => {
 
 
 async function displayalbums() {
-    let a = await fetch(`http://127.0.0.1:5500/musicdr/songs/`)
+    let a = await fetch(`https://github.com/DanishGarg22/MusicDR/blob/main/songs/`)
     let response = await a.text();
     let div = document.createElement("div");
     div.innerHTML = response;
@@ -68,9 +68,9 @@ async function displayalbums() {
         for (let index = 0; index < array.length; index++) {
             const e = array[index];
 
-        if (e.href.includes("/musicdr/songs") && !e.href.includes(".htaccess") ) {
-            let folder = e.href.split("/musicdr/songs/").slice(1)[0]
-            let a = await fetch(`/musicdr/songs/${folder}/info.json`)
+        if (e.href.includes("MusicDR/blob/main/songs") && !e.href.includes(".htaccess") ) {
+            let folder = e.href.split("MusicDR/blob/main/songs/").slice(1)[0]
+            let a = await fetch(`MusicDR/blob/main/songs/${folder}/info.json`)
             let response = await a.json();
             html=`<div data-folder=${folder} class="card">
             <div class="playlistimage">
