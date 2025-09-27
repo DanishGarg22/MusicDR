@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css file/container2.css">
+    <link rel="stylesheet" href="css file/container.css">
+    <title>MusicDR - Your Music Streaming Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <div class="container2">
+            <div class="box">
+                <div class="image">
+                    <img src="logo.png" alt="MusicDR" height="40px">
+                    <img class="cancel" src="svg file/cancel.svg" alt="Close">
+                </div>
+                <button id="btn">
+                    <img src="svg file/homeicon.svg" alt="Home" height="24px" width="24px">
+                    <span>Home</span>
+                </button>
+                <button id="btn1">
+                    <img src="svg file/searchicon.svg" alt="Search" height="24px" width="24px">
+                    <span>Search</span>
+                </button>
+            </div>
+            <div class="box2">
+                <div class="footernavbar">
+                    <button>
+                        <img src="svg file/logo1.svg" alt="Library" height="20px" width="20px">
+                        <span>Your Library</span>
+                    </button>
+                    <button>+</button>
+                </div>
+
+                <div class="playlist">
+                    <ul>
+                        <!-- Playlist items will be populated by JavaScript -->
+                    </ul>
+                </div>
+                
+                <footer>
+                    <div class="footerclass">
+                        <div class="alllinks">
+                            <div><a href="https://www.spotify.com/in-en/legal/">
+                                <span>Legal</span></a></div>
+                            <div><a href="https://www.spotify.com/in-en/privacy/">
+                                <span>Privacy Center</span></a></div>
+                            <div><a href="https://www.spotify.com/in-en/legal/privacy-policy/">
+                                <span>Privacy Policy</span></a></div>
+                            <div><a href="https://www.spotify.com/in-en/legal/cookies-policy/">
+                                <span>Cookies</span></a></div>
+                            <div><a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3">
+                                <span>About Ads</span></a></div>
+                            <div><a href="https://www.spotify.com/in-en/accessibility/">
+                                <span>Accessibility</span></a></div>
+                        </div>
+                        <div class="footerbutton">
+                            <button>
+                                <img src="svg file/earthfooter.svg" alt="Language" height="14px" width="14px">
+                                <span>English</span>
+                            </button>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        
+        <div class="container">
+            <header>
+                <nav class="navbar">
+                    <div class="rightbtn">
+                        <img class="hamburger" src="svg file/hamburger.svg" alt="Menu">
+                        <button><img src="svg file/arrowleft.svg" alt="Back"></button>
+                        <button><img src="svg file/arrowright.svg" alt="Forward"></button>
+                    </div>
+                    <div class="leftbtn">
+                        <button id="signupBtn">Sign up</button>
+                        <button id="loginBtn">Log in</button>
+                    </div>
+                </nav>
+            </header>
+            
+            <div class="containersecondnavbar">
+                <button>MusicDR</button>
+                <button>Show all</button>
+            </div>
+            
+            <div class="containersecond">
+                <!-- Music cards will be populated by JavaScript -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Play bar -->
+    <div class="playbarcomponents">
+        <div class="playbar">
+            <div class="songinfo">
+                Select a song to play
+            </div>
+            <div class="playbarbuttons">
+                <img id="previous" src="svg file/playbarsvgfile/previous.svg" alt="Previous">
+                <img id="play" src="svg file/playbarsvgfile/play.svg" alt="Play">
+                <img id="next" src="svg file/playbarsvgfile/next.svg" alt="Next">
+            </div>
+            <div class="songtime">
+                00:00/00:00
+            </div>
+            <div class="seekbar">
+                <div class="circle"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeLogin">&times;</span>
+            <h2>Log in to MusicDR</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" name="password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="submit-btn">Log In</button>
+            </form>
+            <div class="switch-form">
+                Don't have an account? <a id="switchToSignup">Sign up for MusicDR</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeSignup">&times;</span>
+            <h2>Sign up for MusicDR</h2>
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="signupName">Full Name</label>
+                    <input type="text" id="signupName" name="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email</label>
+                    <input type="email" id="signupEmail" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" name="password" placeholder="Create a password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+                </div>
+                <button type="submit" class="submit-btn">Sign Up</button>
+            </form>
+            <div class="switch-form">
+                Already have an account? <a id="switchToLogin">Log in</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js file/script.js"></script>
+</body>
+</html>
